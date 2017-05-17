@@ -1,7 +1,14 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+
 10.times do |blog|
   Blog.create!(
     title: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraph(2) 
+    body: Faker::Lorem.paragraph(2),
+    topic_id: Topic.last.id
   )
 end
 
