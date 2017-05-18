@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
 
-  resources :portfolio_items, except: [:show]
+  resources :portfolio_items, except: [:show, :index]
   get 'portfolio/:id', to: 'portfolio_items#show', as: 'portfolio_item_show'
-
+  get "portfolio", to: 'portfolio_items#index', as: "portfolio"
   get 'about', to: 'pages#about'
 
   get 'contact', to: 'pages#contact'
