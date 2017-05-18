@@ -28,3 +28,9 @@ end
     thumb_image: Faker::Placeholdit.image("200x200") 
   )
 end
+
+3.times do |technology|
+  PortfolioItem.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
