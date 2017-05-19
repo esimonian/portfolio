@@ -1,1 +1,170 @@
-<h1>Hi, <%= current_user.first_name %></h1>
+<!--<h1>Hi, <%#= current_user.first_name %></h1>-->
+ <!--Hero section-->
+<section class="hero index">
+   <p class="notice"><%= notice %></p>
+  <p><%= alert %></p>
+   <!--Header-->
+         <%= render "shared/nav", location: 'top' %>
+       <%= login_helper %>
+   <!--End header-->
+   <!--Inner hero-->
+   <div class="inner-hero">
+      <canvas class="background-img gradient-hero">
+         <%= image_tag("patt.png") %>
+      </canvas>
+      <!--Container-->
+      <div class="container hero-content index">
+         <!--Row-->
+         <div class="row">
+            <div class="col-sm-12 ">
+               <!--Profile image-->
+               <div class="profile-img ">
+                  <%= image_tag("patt.png") %>
+               </div>
+               <!--End profile image-->
+               <!--Profile name-->
+               <div class="profile-name mt-30">
+                  <h2>Elizabeth<span>Web designer - Developer</span></h2>
+               </div>
+               <!--End profile name-->
+               <!--Profile social-->
+               <div class="profile-social mt-30">
+                  <ul class="social ">
+                     <li><a href="#"><i class="icon-facebook"></i></a></li>
+                     <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                     <li><a href="#"><i class="icon-twitter"></i></a></li>
+                     <li><a href="#"><i class="icon-instagram"></i></a></li>
+                  </ul>
+               </div>
+               <!--End profile social-->
+               <a class="top scroll" href="#about"><i class="icon-down-open"></i></a>
+            </div>
+         </div>
+         <!--End row-->
+    </div>
+    <!--End container-->
+  </div>
+  <!--End inner hero-->
+</section>
+<!--End hero section-->
+<!-- BEGIN PORTFOLIO BOXED MASONRY 3 COLUMNS -->
+<section class="section-portfolio section-overlapping">
+  <div class="container-large">
+    <ul class="items-filter filter-light p-l-10">
+      <li>
+        <a href="#" data-filter=".photography">Photography</a>
+      </li>
+      <li>
+        <a href="#" data-filter=".design">Design</a>
+      </li>
+      <li>
+        <a href="#" data-filter=".branding">Branding</a>
+      </li>
+      <li class="filter-all p-r-10">
+        <a href="#" data-filter="*" class="current">Show all</a>
+      </li>
+    </ul>
+    <div class="masonry grid no-space grid-3">
+      <div class="item design">
+        <div class="item-wrapper">
+          <figure class="he-1 blue darken-1" data-link="portfolio-single-extended">
+            <img src="assets/img/ecommerce/clock-3.jpg" alt="creative">
+            <figcaption class="caption-dark">
+              <h4>Extended project</h4>
+              <p>Stationery, Corporate, Modern</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item branding">
+        <div class="item-wrapper">
+          <figure class="he-1 red darken-3" data-link="portfolio-single-extended">
+            <img src="assets/img/creative/square-1.jpg" alt="creative">
+            <figcaption class="caption-dark">
+              <h4>Extended project</h4>
+              <p>Stationery, Corporate, Modern</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item design branding">
+        <div class="item-wrapper">
+          <figure class="he-1 yellow darken-3" data-link="portfolio-single-fullwidth">
+            <img src="assets/img/creative/square-22.jpg" alt="creative">
+            <figcaption class="caption-dark">
+              <h4>Fullwidth project</h4>
+              <p>Natural, Fashion, Gallery</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item photography">
+        <div class="item-wrapper">
+          <figure class="he-1 blue darken-3" data-link="portfolio-single-left-no-space">
+            <img src="assets/img/creative/square-5.jpg" alt="creative">
+            <figcaption>
+              <h4>Left extended</h4>
+              <p>Mockup, Clean, Paper</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item branding">
+        <div class="item-wrapper">
+          <figure class="he-1 teal accent-4" data-link="portfolio-single-fullwidth">
+            <img src="assets/img/ecommerce/headphones2.jpg" alt="creative">
+            <figcaption class="caption-dark">
+              <h4>Fullwidth project</h4>
+              <p>Natural, Fashion, Gallery</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item photography branding">
+        <div class="item-wrapper">
+          <figure class="he-1 pink darken-3" data-link="portfolio-single-wide-carousel">
+            <img src="assets/img/creative/square-4.jpg" alt="creative">
+            <figcaption>
+              <h4>Wide carousel</h4>
+              <p>Stationery, Corporate, Modern</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item design">
+        <div class="item-wrapper">
+          <figure class="he-1 yellow darken-3" data-link="portfolio-single-fullwidth">
+            <img src="assets/img/creative/square-21.jpg" alt="creative">
+            <figcaption class="caption-dark">
+              <h4>Fullwidth project</h4>
+              <p>Natural, Fashion, Gallery</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item branding">
+        <div class="item-wrapper">
+          <figure class="he-1 cyan darken-3" data-link="portfolio-single-video">
+            <img src="assets/img/creative/square-6.jpg" alt="creative">
+            <figcaption>
+              <h4>Video project</h4>
+              <p>Animated, Flat, Vimeo</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="item design">
+        <div class="item-wrapper">
+          <figure class="he-1 deep-purple darken-3" data-link="portfolio-single-wide-carousel">
+            <img src="assets/img/creative/square-7.jpg" alt="creative">
+            <figcaption>
+              <h4>Wide carousel</h4>
+              <p>Stationery, Corporate, Modern</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END PORTFOLIO BOXED MASONRY 3 COLUMNS -->

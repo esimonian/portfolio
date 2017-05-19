@@ -1,7 +1,71 @@
-<div class="<%= location %>">
- <div><%= link_to "Home", root_path %></div>
- <div><%= link_to "About", about_path %></div>
- <div><%= link_to "Contact", contact_path %></div>
- <div><%= link_to "Blog", blogs_path %></div>
- <div><%= link_to "Portfolio", portfolio_path %></div>
-</div>
+<!-- BEGIN MAIN NAVIGATION -->
+<header id="header">
+  <div id="off-fullscreen-menu">
+    <button class="toggle-menu" data-toggle="fullscreen-menu">
+      <span></span>
+      <span class="menu-label">Menu</span>
+    </button>
+    <div class="brand">
+    <!--<img width="145" height="36" src="assets/img/logo/logo-light.png" alt="logo">-->
+      <%= image_tag("logo-short-light.png") %>
+    </div>
+    <nav>
+      <ul>
+        <li class="">
+          <%= link_to "Home", root_path %>
+        </li>
+        <li class="">
+          <%= link_to "About", about_path %>
+        </li>
+        <li class="">
+          <%= link_to "Blog", blogs_path %>
+        </li>
+        <li class="">
+          <%= link_to "Contact", contact_path %>
+        </li>
+        <li class="">
+          <%= link_to "Portfolio", portfolio_path %>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <div class="pull-left"> © Copyright 2016. All Rights Reserved.</div>
+      <div class="pull-right">
+        <ul class="list-unstyled list-inline">
+          <li>
+            <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#" title="Facebook"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#" title="Facebook"><i class="fa fa-google"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <div id="main-navigation" class="submenu-dark">
+    <div class="main-nav-wrapper">
+      <div class="container-fluid">
+        <div class="nav-left">
+          <div id="logo">
+            <a href="#" data-logo-light="<%= asset_path 'logo-short-light.png' %>" data-logo-dark="<%= asset_path 'logo-short-light.png' %>">
+              <%= image_tag("logo-short-light.png") %>
+            </a>
+          </div>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-tools">
+            <li class="off-menu-btn">
+              <button class="toggle-menu" data-toggle="fullscreen-menu">
+                <span></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <!-- END MAIN NAVIGATION -->
