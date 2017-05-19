@@ -36,6 +36,7 @@ gem 'faker'
 gem 'friendly_id', '~> 5.1.0' 
 gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'master'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'petergate', '~> 1.6', '>= 1.6.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
