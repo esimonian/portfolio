@@ -65,105 +65,20 @@
       </li>
     </ul>
     <div class="masonry grid no-space grid-3">
+    <% @portfolio_items.each do |item| %>
+   
       <div class="item design">
         <div class="item-wrapper">
           <figure class="he-1 blue darken-1" data-link="portfolio-single-extended">
-            <img src="assets/img/ecommerce/clock-3.jpg" alt="creative">
+            <%= image_tag item.thumb_image if !item.thumb_image.nil? %>
             <figcaption class="caption-dark">
-              <h4>Extended project</h4>
-              <p>Stationery, Corporate, Modern</p>
+              <h4><%= item.title %></h4>
+              <p><%= item.subtitle %></p>
             </figcaption>
           </figure>
         </div>
       </div>
-      <div class="item branding">
-        <div class="item-wrapper">
-          <figure class="he-1 red darken-3" data-link="portfolio-single-extended">
-            <img src="assets/img/creative/square-1.jpg" alt="creative">
-            <figcaption class="caption-dark">
-              <h4>Extended project</h4>
-              <p>Stationery, Corporate, Modern</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="item design branding">
-        <div class="item-wrapper">
-          <figure class="he-1 yellow darken-3" data-link="portfolio-single-fullwidth">
-            <img src="assets/img/creative/square-22.jpg" alt="creative">
-            <figcaption class="caption-dark">
-              <h4>Fullwidth project</h4>
-              <p>Natural, Fashion, Gallery</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="item photography">
-        <div class="item-wrapper">
-          <figure class="he-1 blue darken-3" data-link="portfolio-single-left-no-space">
-            <img src="assets/img/creative/square-5.jpg" alt="creative">
-            <figcaption>
-              <h4>Left extended</h4>
-              <p>Mockup, Clean, Paper</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="item branding">
-        <div class="item-wrapper">
-          <figure class="he-1 teal accent-4" data-link="portfolio-single-fullwidth">
-            <img src="assets/img/ecommerce/headphones2.jpg" alt="creative">
-            <figcaption class="caption-dark">
-              <h4>Fullwidth project</h4>
-              <p>Natural, Fashion, Gallery</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="item photography branding">
-        <div class="item-wrapper">
-          <figure class="he-1 pink darken-3" data-link="portfolio-single-wide-carousel">
-            <img src="assets/img/creative/square-4.jpg" alt="creative">
-            <figcaption>
-              <h4>Wide carousel</h4>
-              <p>Stationery, Corporate, Modern</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="item design">
-        <div class="item-wrapper">
-          <figure class="he-1 yellow darken-3" data-link="portfolio-single-fullwidth">
-            <img src="assets/img/creative/square-21.jpg" alt="creative">
-            <figcaption class="caption-dark">
-              <h4>Fullwidth project</h4>
-              <p>Natural, Fashion, Gallery</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="item branding">
-        <div class="item-wrapper">
-          <figure class="he-1 cyan darken-3" data-link="portfolio-single-video">
-            <img src="assets/img/creative/square-6.jpg" alt="creative">
-            <figcaption>
-              <h4>Video project</h4>
-              <p>Animated, Flat, Vimeo</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="item design">
-        <div class="item-wrapper">
-          <figure class="he-1 deep-purple darken-3" data-link="portfolio-single-wide-carousel">
-            <img src="assets/img/creative/square-7.jpg" alt="creative">
-            <figcaption>
-              <h4>Wide carousel</h4>
-              <p>Stationery, Corporate, Modern</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
+    <%end %>
     </div>
   </div>
 </section>

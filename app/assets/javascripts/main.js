@@ -2,7 +2,7 @@ $( document ).ready(function() {
 // Site hero setup
 
   function mainHeroResize() {
-      $(".hero.index").css('height', $(window).height()/1.4);
+      $(".hero.index").css('height', $(window).height()/1.1);
   }
 
   $(function() {
